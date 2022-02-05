@@ -14,3 +14,7 @@ def homePage(request):
     return render(request,"homePage.html",{ "name": "Django"})
 def img(request):
     return render(request,"imgPage.html",{})
+def forPage(request):
+    # ctx = {"themes":["Django", "Python", "Java", "C++"]}
+    ctx = {"themes":[]}
+    return render(request,"forPage.html",ctx)

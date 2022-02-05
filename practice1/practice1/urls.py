@@ -24,5 +24,6 @@ urlpatterns = [
     path("time/", time),
     path("years/<year>", yearsOld),
     path("homePage/", homePage),
-    path("img/", img)
+    path("img/", img),
+    path("for/", forPage)
 ]
