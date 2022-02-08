@@ -1,5 +1,16 @@
 {% extends "base.html" %}
 
 {% block content %}
-    CONTENT
+<div class="row">
+    <div class="col-md-6">
+        {% for web in list_webs %}
+            <span> {{web.name}} </span>
+        {% endfor %}
+    </div>
+    <div class="col-md-6">
+        {% for theme in list_themes %}
+            <span> {{theme.name}} </span>
+        {% endfor %}
+    </div>
+</div>
 {% endblock content %}
