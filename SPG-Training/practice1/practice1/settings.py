@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
-import secretData
+from . import secretData
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'practice1.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME':'BuyAndSell',
+        'NAME':'buyandsell',
         'USER':'postgres',
         'PASSWORD': secretData.Data["PASSWORD"],
         'HOST':'127.0.0.1',
