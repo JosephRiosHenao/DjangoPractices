@@ -1,0 +1,22 @@
+.navbar-side {
+    min-height: 100vh;
+    width: 100px;
+    background-color: rgba(255, 255, 255, 0.185);
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1;
+    
+}
+
+.item-navbar {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    
+    text-align: center;
+    width: 100px;
+    height: 70px;
+    background-color: rgb(49, 41, 41);
+}

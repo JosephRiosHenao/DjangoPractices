@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div align="left" class="mb-3 mt-3">
+    <a href="create" type="button" class="btn btn-primary">Crear</a>
+</div>
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Description</th>
+            <th class="text-right">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for state in object_list %}
+        <tr>
+            <td>{{ state.ID }}</td>
+            <td>{{ state.description }}</td>
+            <td align="right">
+                <form action="delete/{{state.ID}}" method="post">
+                    {% csrf_token %}
+                    <div class="btn-group">
+                        <a href="detail/{{state.ID}}" type="button" class="btn btn-success">Detail</a>
+                        <a href="update/{{state.ID}}" type="button" class="btn btn-primary">Update</a>
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                        <!-- <button type="submit" class="btn btn-danger" onclick="return delete()">Delete</button> -->
+                    </div>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock content %}
