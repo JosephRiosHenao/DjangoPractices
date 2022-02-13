@@ -15,9 +15,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from BuyAndSell import views
+from BuyAndSell.views import *
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', views.home)
+    path('admin/',admin.site.urls),
+    # CREATE OBJECT
+    path('db/create/',CreateState.as_view(template_name='state/create.html'), name="create"),
+    # READ ALL
+    path('db/',ListState.as_view(template_name='state/data.html'),name='db'),
+    # READ OBJECT
+    path('db/detail/<int:pk>',ReadState.as_view(template_name='state/detail.html'),name='detail'),
+    # UPDATE OBJECT
+    path('db/update/<int:pk>',UpdateState.as_view(template_name='state/update.html'),name='update'),
+    # DELETE OBJECT
+    path('db/delete/<int:pk>',DeleteState.as_view(),name='delete'),
+    path('', home)
 ]

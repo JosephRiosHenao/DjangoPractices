@@ -5,7 +5,7 @@ from django.views.generic import DetailView, ListView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 # DATABASE MODELS
 from .models import *
-# FORmS
+# FORMS
 from django import forms
 # Nos sirve para redireccionar despues de una acción revertiendo patrones de expresiones regulares 
 from django.urls import reverse
@@ -14,7 +14,7 @@ from django.contrib import messages
 # Habilitamos los mensajes para class-based views 
 from django.contrib.messages.views import SuccessMessageMixin 
 
-class StatesList(ListView):
+class ListState(ListView):
     model = State
 
 class CreateState(SuccessMessageMixin, CreateView):
