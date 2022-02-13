@@ -1,5 +1,6 @@
 {% load static %}
 {% load bootstrap4 %}
+{% load widget_tweaks %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,9 +8,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="Description" content="Enter your description here"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.6.0/materia/bootstrap.min.css">
+{% comment %} <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.6.0/materia/bootstrap.min.css"> {% endcomment %}
 {% comment %}<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">  {% endcomment %}
-{% comment %} <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.6.0/darkly/bootstrap.min.css"> {% endcomment %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.6.0/darkly/bootstrap.min.css">
 {% comment %} {% bootstrap_css %} {% endcomment %}
 <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 <title> {% block title %}{% endblock title %} </title>
@@ -21,7 +22,7 @@
             {% include "components/navbar-side.html" %}
         </div>
         <div class="col-md-11">
-            <div class="container area">
+            <div class="container area mt-5">
                 {% block content %}
                     
                 {% endblock content %}
@@ -29,5 +30,6 @@
         </div>
     </div>
     {% bootstrap_javascript jquery='full' %} 
+    <script src="{% static 'js/formsUtils.js' %}"></script>
 </body>
 </html>

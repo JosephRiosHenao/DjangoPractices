@@ -1,6 +1,13 @@
 {% extends 'base.html' %}
 
 {% block content %}
+{% comment %} {% if messages %}
+    <ul class="messages list-group mb-3">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }} list-group-item list-group-item-primary"{% endif %}>{{ message }}</li>
+    {% endfor %}
+    </ul>
+{% endif %} {% endcomment %}
 <div align="left" class="mb-3 mt-3">
     <a href="create" type="button" class="btn btn-primary">Crear</a>
 </div>
@@ -23,8 +30,8 @@
                     <div class="btn-group">
                         <a href="detail/{{state.ID}}" type="button" class="btn btn-success">Ver</a>
                         <a href="update/{{state.ID}}" type="button" class="btn btn-primary">Cambiar</a>
-                        <button type="submit" class="btn btn-danger">Borrar</button>
-                        <!-- <button type="submit" class="btn btn-danger" onclick="return delete()">Delete</button> -->
+                        {% comment %} <button type="submit" class="btn btn-danger">Borrar</button> {% endcomment %}
+                        <button type="submit" class="btn btn-danger" onclick="return eliminar();">Borrar</button> 
                     </div>
                 </form>
             </td>
