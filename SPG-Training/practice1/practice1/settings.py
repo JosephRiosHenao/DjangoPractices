@@ -26,7 +26,8 @@ SECRET_KEY = 'django-insecure-)g-s9e)^lm4071)a69e57sw%3kh#vb*kh875i)hc=)6-hb=4k1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# CAUTION: This is not a production setting.
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -40,7 +41,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'BuyAndSell',
     'bootstrap4',
-    'widget_tweaks'
+    'widget_tweaks',
+    'Client',
+    'Service',
 ]
 
 MIDDLEWARE = [
