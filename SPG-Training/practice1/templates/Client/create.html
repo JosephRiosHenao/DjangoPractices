@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+
+{% block content %}
+<h4>Crear</h4>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="description" class="text_negrita">Descripcion</label>
+            {{form.description|add_class:"form-control" }}
+        </div>
+        <button type="submit" class="btn btn-success">Aceptar</button>
+        <a href="../" class="btn btn-danger">Atras</a>
+    </form>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        <h4>Actualizar</h4>
+        <div class="form-group">
+            <label for="description">Descripcion</label>
+            {{ form.description | add_class:"form-control mb-3" }}
+            <button type="submit" class="btn btn-primary">Actualizar</button>
+            <a href="../" class="btn btn-danger">Atras</a>
+        </div>
+    </form>
+{% endblock %}
