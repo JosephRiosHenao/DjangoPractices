@@ -16,16 +16,23 @@
             </ul> -->
             <ul>
                 <li>
-                    <a href="http://justinfarrow.com">
+                    <a href="{% url 'Home' %}">
                         <i class="fa fa-home fa-2x"></i>
                         <span class="nav-text">
                             Inicio
                         </span>
                     </a>
-                  
+                </li>
+                <li>
+                    <a href="{% url 'Client' %}">
+                        <i class="fa fa-bar-chart-o fa-2x"></i>
+                        <span class="nav-text">
+                            Cliente
+                        </span>
+                    </a>
                 </li>
                 <li class="has-subnav">
-                    <a href="#">
+                    <a href="{% url 'TypeDoc' %}">
                         <i class="fa fa-laptop fa-2x"></i>
                         <span class="nav-text">
                             Tipo Documento
@@ -34,8 +41,8 @@
                     
                 </li>
                 <li class="has-subnav">
-                    <a href="#">
-                       <i class="fa fa-list fa-2x"></i>
+                    <a href="{% url 'TypeAct' %}">
+                        <i class="fa fa-list fa-2x"></i>
                         <span class="nav-text">
                             Tipo Actividad
                         </span>
@@ -43,51 +50,42 @@
                     
                 </li>
                 <li class="has-subnav">
-                    <a href="#">
-                       <i class="fa fa-folder-open fa-2x"></i>
+                    <a href="{% url 'State' %}">
+                        <i class="fa fa-folder-open fa-2x"></i>
                         <span class="nav-text">
                             Estado
                         </span>
                     </a>
-                   
                 </li>
                 <li>
-                    <a href="#">
-                        <i class="fa fa-bar-chart-o fa-2x"></i>
-                        <span class="nav-text">
-                            Cliente
-                        </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa fa-font fa-2x"></i>
-                        <span class="nav-text">
-                           Movimiento Producto Servicio
-                        </span>
-                    </a>
-                </li>
-                <li>
-                   <a href="#">
-                       <i class="fa fa-table fa-2x"></i>
+                    <a href="{% url 'ServicesProduct' %}">
+                        <i class="fa fa-table fa-2x"></i>
                         <span class="nav-text">
                             Productos Servicios
                         </span>
                     </a>
                 </li>
                 <li>
-                   <a href="#">
-                        <i class="fa fa-map-marker fa-2x"></i>
+                    <a href="{% url 'ServiceProductType' %}">
+                        <i class="fa fa-info fa-2x"></i>
                         <span class="nav-text">
-                            Tipo Movimiento
+                            Tipo Producto Servicio
                         </span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
-                       <i class="fa fa-info fa-2x"></i>
+                    <a href="{% url 'MovProdServ' %}">
+                        <i class="fa fa-font fa-2x"></i>
                         <span class="nav-text">
-                            Tipo Producto Servicio
+                            Movimiento Producto Servicio
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'TypeMovement' %}">
+                        <i class="fa fa-map-marker fa-2x"></i>
+                        <span class="nav-text">
+                            Tipo Movimiento
                         </span>
                     </a>
                 </li>
@@ -95,8 +93,8 @@
 
             <!-- <ul class="logout">
                 <li>
-                   <a href="#">
-                         <i class="fa fa-power-off fa-2x"></i>
+                    <a href="#">
+                        <i class="fa fa-power-off fa-2x"></i>
                         <span class="nav-text">
                             Logout
                         </span>

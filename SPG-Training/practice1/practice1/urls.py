@@ -19,7 +19,7 @@ from .views import *
 # from BuyAndSell.views import *
 
 urlpatterns = [
-    path("", HomePage),
+    path("", HomePage, name="Home"),
     path("", include('Client.urls')),
     path("", include('Service.urls'))
     
