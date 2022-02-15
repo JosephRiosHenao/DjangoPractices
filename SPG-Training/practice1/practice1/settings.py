@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'BuyAndSell',
+    # 'BuyAndSell',
     'bootstrap4',
     'widget_tweaks',
     'Client',
@@ -83,7 +83,7 @@ WSGI_APPLICATION = 'practice1.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME':'buyandsell',
+        'NAME':'practice1work',
         'USER':'postgres',
         'PASSWORD': secretData.Data["PASSWORD"],
         'HOST':'127.0.0.1',

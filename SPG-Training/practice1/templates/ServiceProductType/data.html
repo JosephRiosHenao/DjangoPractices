@@ -20,16 +20,16 @@
         </tr>
     </thead>
     <tbody>
-        {% for state in object_list %}
+        {% for serviceProductType in object_list %}
         <tr>
-            <td>{{ state.ID }}</td>
-            <td>{{ state.description }}</td>
+            <td>{{ serviceProductType.ID }}</td>
+            <td>{{ serviceProductType.description }}</td>
             <td align="right">
-                <form action="delete/{{state.ID}}" method="post">
+                <form action="delete/{{serviceProductType.ID}}" method="post">
                     {% csrf_token %}
                     <div class="btn-group">
-                        <a href="detail/{{state.ID}}" type="button" class="btn btn-success">Ver</a>
-                        <a href="update/{{state.ID}}" type="button" class="btn btn-primary">Cambiar</a>
+                        <a href="detail/{{serviceProductType.ID}}" type="button" class="btn btn-success">Ver</a>
+                        <a href="update/{{serviceProductType.ID}}" type="button" class="btn btn-primary">Cambiar</a>
                         {% comment %} <button type="submit" class="btn btn-danger">Borrar</button> {% endcomment %}
                         <button type="submit" class="btn btn-danger" onclick="return eliminar();">Borrar</button> 
                     </div>

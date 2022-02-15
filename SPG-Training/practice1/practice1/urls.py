@@ -14,20 +14,26 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-from BuyAndSell.views import *
+from django.urls import path, include
+from .views import *
+# from BuyAndSell.views import *
 
 urlpatterns = [
-    path('admin/',admin.site.urls),
-    # CREATE OBJECT
-    path('db/create/',CreateState.as_view(template_name='state/create.html'), name="create"),
-    # READ ALL
-    path('db/',ListState.as_view(template_name='state/data.html'),name='db'),
-    # READ OBJECT
-    path('db/detail/<int:pk>',ReadState.as_view(template_name='state/detail.html'),name='detail'),
-    # UPDATE OBJECT
-    path('db/update/<int:pk>',UpdateState.as_view(template_name='state/update.html'),name='update'),
-    # DELETE OBJECT
-    path('db/delete/<int:pk>',DeleteState.as_view(),name='delete'),
-    path('', home)
+    path("", HomePage),
+    path("", include('Client.urls')),
+    path("", include('Service.urls'))
+    
+    
+    # path('admin/',admin.site.urls),
+    # # CREATE OBJECT
+    # path('db/create/',CreateState.as_view(template_name='state/create.html'), name="create"),
+    # # READ ALL
+    # path('db/',ListState.as_view(template_name='state/data.html'),name='db'),
+    # # READ OBJECT
+    # path('db/detail/<int:pk>',ReadState.as_view(template_name='state/detail.html'),name='detail'),
+    # # UPDATE OBJECT
+    # path('db/update/<int:pk>',UpdateState.as_view(template_name='state/update.html'),name='update'),
+    # # DELETE OBJECT
+    # path('db/delete/<int:pk>',DeleteState.as_view(),name='delete'),
+    # path('', home)
 ]

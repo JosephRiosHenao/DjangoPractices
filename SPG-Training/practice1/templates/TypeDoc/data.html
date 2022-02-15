@@ -20,16 +20,16 @@
         </tr>
     </thead>
     <tbody>
-        {% for typeAct in object_list %}
+        {% for typeDoc in object_list %}
         <tr>
-            <td>{{ typeAct.ID }}</td>
-            <td>{{ typeAct.description }}</td>
+            <td>{{ typeDoc.ID }}</td>
+            <td>{{ typeDoc.description }}</td>
             <td align="right">
-                <form action="delete/{{typeAct.ID}}" method="post">
+                <form action="delete/{{typeDoc.ID}}" method="post">
                     {% csrf_token %}
                     <div class="btn-group">
-                        <a href="detail/{{typeAct.ID}}" type="button" class="btn btn-success">Ver</a>
-                        <a href="update/{{typeAct.ID}}" type="button" class="btn btn-primary">Cambiar</a>
+                        <a href="detail/{{typeDoc.ID}}" type="button" class="btn btn-success">Ver</a>
+                        <a href="update/{{typeDoc.ID}}" type="button" class="btn btn-primary">Cambiar</a>
                         {% comment %} <button type="submit" class="btn btn-danger">Borrar</button> {% endcomment %}
                         <button type="submit" class="btn btn-danger" onclick="return eliminar();">Borrar</button> 
                     </div>
