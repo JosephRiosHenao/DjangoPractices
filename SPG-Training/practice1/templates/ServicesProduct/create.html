@@ -6,8 +6,30 @@
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
         <div class="form-group">
-            <label for="description" class="text_negrita">Descripcion</label>
-            {{form.description|add_class:"form-control" }}
+            <label for="serviceProductTypeID" class="text_negrita">Tipo del Prod/Serv
+            </label>
+            {{form.serviceProductTypeID|add_class:"form-control" }}
+        </div>
+        <div class="form-group">
+            <label for="nameProdServ" class="text_negrita">Nombre del Prod/Serv
+            </label>
+            {{form.nameProdServ|add_class:"form-control" }}
+        </div>
+        <div class="form-group">
+            <label for="dateIn" class="text_negrita">Fecha Inicial</label>
+            {{form.dateIn|add_class:"form-control"|attr:"type:date" }}
+        </div>
+        <div class="form-group">
+            <label for="stateID" class="text_negrita">Estado</label>
+            {{form.stateID|add_class:"form-control" }}
+        </div>
+        <div class="form-group">
+            <label for="observation" class="text_negrita">Observacion</label>
+            {{form.observation|add_class:"form-control" }}
+        </div>
+        <div class="form-group">
+            <label for="exists" class="text_negrita">Existencia</label>
+            {{form.exists|add_class:"form-control" }}
         </div>
         <button type="submit" class="btn btn-success">Aceptar</button>
         <a href="../" class="btn btn-danger">Atras</a>

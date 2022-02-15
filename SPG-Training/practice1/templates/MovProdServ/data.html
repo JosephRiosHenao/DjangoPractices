@@ -15,21 +15,33 @@
     <thead>
         <tr>
             <th>ID</th>
-            <th>Descripcion</th>
+            <th>Tipo Documento Cliente</th>
+            <th>Cliente</th>
+            <th>Tipo Prod/Serv</th>
+            <th>Prod/Serv</th>
+            <th>Tipo Movimiento</th>
+            <th>Fecha Movimiento</th>
+            <th>Observacion</th>
             <th class="text-right">Acciones</th>
         </tr>
     </thead>
     <tbody>
-        {% for state in object_list %}
+        {% for movProdServ in object_list %}
         <tr>
-            <td>{{ state.ID }}</td>
-            <td>{{ state.description }}</td>
+            <td>{{ movProdServ.id }}</td>
+            <td>{{ movProdServ.typeDocClientID }}</td>
+            <td>{{ movProdServ.clientID }}</td>
+            <td>{{ movProdServ.typeProdServID }}</td>
+            <td>{{ movProdServ.prodServID }}</td>
+            <td>{{ movProdServ.typeMovementID }}</td>
+            <td>{{ movProdServ.dateMov }}</td>
+            <td>{{ movProdServ.observation }}</td>
             <td align="right">
-                <form action="delete/{{state.ID}}" method="post">
+                <form action="delete/{{movProdServ.ID}}" method="post">
                     {% csrf_token %}
                     <div class="btn-group">
-                        <a href="detail/{{state.ID}}" type="button" class="btn btn-success">Ver</a>
-                        <a href="update/{{state.ID}}" type="button" class="btn btn-primary">Cambiar</a>
+                        <a href="detail/{{movProdServ.ID}}" type="button" class="btn btn-success">Ver</a>
+                        <a href="update/{{movProdServ.ID}}" type="button" class="btn btn-primary">Cambiar</a>
                         {% comment %} <button type="submit" class="btn btn-danger">Borrar</button> {% endcomment %}
                         <button type="submit" class="btn btn-danger" onclick="return eliminar();">Borrar</button> 
                     </div>

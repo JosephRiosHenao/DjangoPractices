@@ -7,13 +7,23 @@
     <thead>
         <tr>
             <th>ID</th>
-            <th>Descripcion</th>
+            <th>Tipo del Prod/Serv</th>
+            <th>Nombre del Prod/Serv</th>
+            <th>Fech6a Inicial</th>
+            <th>Estado</th>
+            <th>Observacion</th>
+            <th>Existencia</th>
         </tr>
     </thead>
     <tbody>
         <tr>
             <td>{{ object.ID }}</td>
-            <td>{{ object.description }}</td>
+            <td>{{ object.ServicesProductTypeID }}</td>
+            <td>{{ object.nameProdServ }}</td>
+            <td>{{ object.dateIn }}</td>
+            <td>{{ object.stateID }}</td>
+            <td>{{ object.observation }}</td>
+            <td>{{ object.exists }}</td>
         </tr>
     </tbody>
 </table>

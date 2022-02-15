@@ -5,10 +5,34 @@
         {% csrf_token %}
         <h4>Actualizar</h4>
         <div class="form-group">
-            <label for="description">Descripcion</label>
-            {{ form.description | add_class:"form-control mb-3" }}
-            <button type="submit" class="btn btn-primary">Actualizar</button>
-            <a href="../" class="btn btn-danger">Atras</a>
+            <label for="typeDocClientID">Tipo Documento Cliente</label>
+            {{ form.typeDocClientID | add_class:"form-control mb-3" }}
         </div>
+        <div class="form-group">
+            <label for="clientID">Cliente</label>
+            {{ form.clientID | add_class:"form-control mb-3" }}
+        </div>
+        <div class="form-group">
+            <label for="typeProdServID">Tipo Prod/Serv</label>
+            {{ form.typeProdServID | add_class:"form-control mb-3" }}
+        </div>
+        <div class="form-group">
+            <label for="prodServID">Prod/Serv</label>
+            {{ form.prodServID | add_class:"form-control mb-3" }}
+        </div>
+        <div class="form-group">
+            <label for="typeMovementID">Tipo Movimiento</label>
+            {{ form.typeMovementID | add_class:"form-control mb-3" }}
+        </div>
+        <div class="form-group">
+            <label for="dateMov">Fecha Movimiento</label>
+            {{ form.dateMov | add_class:"form-control mb-3" }}
+        </div>
+        <div class="form-group">
+            <label for="observation">Observacion</label>
+            {{ form.observation | add_class:"form-control mb-3" }}
+        </div>
+        <button type="submit" class="btn btn-primary">Actualizar</button>
+        <a href="../" class="btn btn-danger">Atras</a>
     </form>
 {% endblock %}

@@ -22,7 +22,7 @@ class CreateState(SuccessMessageMixin, CreateView):
     fields = "__all__"
     success_message = "State created successfully"
     def get_success_url(self):        
-        return reverse('state')
+        return reverse('State')
 class ReadState(DetailView):
     model = State
 class UpdateState(SuccessMessageMixin, UpdateView):

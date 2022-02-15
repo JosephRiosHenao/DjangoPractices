@@ -15,21 +15,31 @@
     <thead>
         <tr>
             <th>ID</th>
-            <th>Descripcion</th>
+            <th>Tipo del Prod/Serv</th>
+            <th>Nombre del Prod/Serv</th>
+            <th>Fech6a Inicial</th>
+            <th>Estado</th>
+            <th>Observacion</th>
+            <th>Existencia</th>
             <th class="text-right">Acciones</th>
         </tr>
     </thead>
     <tbody>
-        {% for state in object_list %}
+        {% for serviceProduct in object_list %}
         <tr>
-            <td>{{ state.ID }}</td>
-            <td>{{ state.description }}</td>
+            <td>{{ serviceProduct.ID }}</td>
+            <td>{{ serviceProduct.serviceProductTypeID }}</td>
+            <td>{{ serviceProduct.nameProdServ }}</td>
+            <td>{{ serviceProduct.dateIn }}</td>
+            <td>{{ serviceProduct.stateID }}</td>
+            <td>{{ serviceProduct.observation }}</td>
+            <td>{{ serviceProduct.exists }}</td>
             <td align="right">
-                <form action="delete/{{state.ID}}" method="post">
+                <form action="delete/{{serviceProduct.ID}}" method="post">
                     {% csrf_token %}
                     <div class="btn-group">
-                        <a href="detail/{{state.ID}}" type="button" class="btn btn-success">Ver</a>
-                        <a href="update/{{state.ID}}" type="button" class="btn btn-primary">Cambiar</a>
+                        <a href="detail/{{serviceProduct.ID}}" type="button" class="btn btn-success">Ver</a>
+                        <a href="update/{{serviceProduct.ID}}" type="button" class="btn btn-primary">Cambiar</a>
                         {% comment %} <button type="submit" class="btn btn-danger">Borrar</button> {% endcomment %}
                         <button type="submit" class="btn btn-danger" onclick="return eliminar();">Borrar</button> 
                     </div>

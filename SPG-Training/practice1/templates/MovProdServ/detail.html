@@ -7,13 +7,25 @@
     <thead>
         <tr>
             <th>ID</th>
-            <th>Descripcion</th>
+            <th>Tipo Documento Cliente</th>
+            <th>Cliente</th>
+            <th>Tipo Prod/Serv</th>
+            <th>Prod/Serv</th>
+            <th>Tipo Movimiento</th>
+            <th>Fecha Movimiento</th>
+            <th>Observacion</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td>{{ object.ID }}</td>
-            <td>{{ object.description }}</td>
+            <td>{{ movProdServ.ID }}</td>
+            <td>{{ movProdServ.typeDocClientID }}</td>
+            <td>{{ movProdServ.clientID }}</td>
+            <td>{{ movProdServ.typeProdServID }}</td>
+            <td>{{ movProdServ.prodServID }}</td>
+            <td>{{ movProdServ.typeMovementID }}</td>
+            <td>{{ movProdServ.dateMov }}</td>
+            <td>{{ movProdServ.observation }}</td>
         </tr>
     </tbody>
 </table>

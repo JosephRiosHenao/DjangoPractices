@@ -7,13 +7,23 @@
     <thead>
         <tr>
             <th>ID</th>
-            <th>Descripcion</th>
+            <th>Tipo Documento</th>
+            <th>Nombre RS</th>
+            <th>Tipo Actividad</th>
+            <th>Fecha Inicial</th>
+            <th>Estado</th>
+            <th>Observacion</th>
         </tr>
     </thead>
     <tbody>
         <tr>
             <td>{{ object.ID }}</td>
-            <td>{{ object.description }}</td>
+            <td>{{ object.typeDocID }}</td>
+            <td>{{ object.nameRS }}</td>
+            <td>{{ object.typeActID }}</td>
+            <td>{{ object.dateIn }}</td>
+            <td>{{ object.stateID }}</td>
+            <td>{{ object.observation }}</td>
         </tr>
     </tbody>
 </table>

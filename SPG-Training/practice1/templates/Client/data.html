@@ -15,21 +15,31 @@
     <thead>
         <tr>
             <th>ID</th>
-            <th>Descripcion</th>
+            <th>Tipo Documento</th>
+            <th>Nombre RS</th>
+            <th>Tipo Actividad</th>
+            <th>Fecha Inicial</th>
+            <th>Estado</th>
+            <th>Observacion</th>
             <th class="text-right">Acciones</th>
         </tr>
     </thead>
     <tbody>
-        {% for state in object_list %}
+        {% for client in object_list %}
         <tr>
-            <td>{{ state.ID }}</td>
-            <td>{{ state.description }}</td>
+            <td>{{ client.ID }}</td>
+            <td>{{ client.typeDocID }}</td>
+            <td>{{ client.nameRS }}</td>
+            <td>{{ client.typeActID }}</td>
+            <td>{{ client.dateIn }}</td>
+            <td>{{ client.stateID }}</td>
+            <td>{{ client.observation }}</td>
             <td align="right">
-                <form action="delete/{{state.ID}}" method="post">
+                <form action="delete/{{client.ID}}" method="post">
                     {% csrf_token %}
                     <div class="btn-group">
-                        <a href="detail/{{state.ID}}" type="button" class="btn btn-success">Ver</a>
-                        <a href="update/{{state.ID}}" type="button" class="btn btn-primary">Cambiar</a>
+                        <a href="detail/{{client.ID}}" type="button" class="btn btn-success">Ver</a>
+                        <a href="update/{{client.ID}}" type="button" class="btn btn-primary">Cambiar</a>
                         {% comment %} <button type="submit" class="btn btn-danger">Borrar</button> {% endcomment %}
                         <button type="submit" class="btn btn-danger" onclick="return eliminar();">Borrar</button> 
                     </div>
