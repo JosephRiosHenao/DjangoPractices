@@ -8,21 +8,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="Description" content="Enter your description here"/>
-{% comment %} <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.6.0/materia/bootstrap.min.css"> {% endcomment %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.6.0/materia/bootstrap.min.css">
 {% comment %} <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">  {% endcomment %}
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.6.0/darkly/bootstrap.min.css">
+{% comment %} <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.6.0/darkly/bootstrap.min.css"> {% endcomment %}
 {% comment %} {% bootstrap_css %} {% endcomment %}
 <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 <title> Sistema Gestion </title>
 </head>
 <body>
-    {% include "components/navbar.html" %}
+    {% if  not homePageState %}
+        {% include "components/navbar.html" %}
+    {% endif %}
     <div class="row h-100">
         <div class="col-1">
             {% include "components/navbar-side.html" %}
         </div>
         <div class="col-md-11">
-            <div class="container area mt-5">
+            <div class="container area {% if not homePageState %}mt-5{% endif %}">
                 {% block content %}
                     
                 {% endblock content %}
