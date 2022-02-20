@@ -1,0 +1,3 @@
+- practice1/ Test all
+- practice2/ Database practice
+- practice3/ Database relations
